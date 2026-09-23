@@ -20,4 +20,8 @@ public class EquilateralTriangle implements RegularPolygon{
 		// TODO Auto-generated method stub
 		return length;
 	}
+	
+	
+	
+	
 }
