@@ -1,0 +1,73 @@
+package org.ritik.security;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Encryption {
+
+	public void encryptfile(String path)
+
+	{
+		FileInputStream Input_filestream = null;
+		FileOutputStream output_filestream = null;
+		int key = 8;
+
+		try {
+			File read_file = new File(path);
+			
+			//file exist or not
+			if (read_file.exists())
+				System.out.println("File is all ready present");
+			else {
+				System.out.println("File is not exists, Create new one file");
+				read_file.createNewFile();
+			}
+
+			// read data from file 
+			Input_filestream = new FileInputStream(read_file);
+			byte[] arrInput = Input_filestream.readAllBytes();
+
+			// encrypt data
+			for (int iTmp = 0; iTmp < arrInput.length; iTmp++) {
+				arrInput[iTmp] = (byte) (arrInput[iTmp] + key);
+			}
+			
+			// encrypt data stored in test_enc file
+			File encrypt_file = new File("c:\\Java\\test_enc.txt");
+
+			if (encrypt_file.exists())
+				System.out.println("File is present");
+			else {
+				System.out.println("File is not exists, Create new one file");
+				encrypt_file.createNewFile();
+			}
+
+			// write encryption
+			output_filestream = new FileOutputStream(encrypt_file);
+			output_filestream.write(arrInput);
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (Input_filestream != null || output_filestream != null)
+					Input_filestream.close();
+				output_filestream.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+}
