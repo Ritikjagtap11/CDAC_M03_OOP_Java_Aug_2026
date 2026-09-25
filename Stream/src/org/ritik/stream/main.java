@@ -13,7 +13,7 @@ public class main {
 		// TODO Auto-generated method stub
 
 		ArrayList<String> trainees = new ArrayList<>();
-		trainees.add("kajal");
+		trainees.add("ka");
 		trainees.add("Rahul");
 		trainees.add("kiyan");
 		trainees.add("Ankit");
@@ -35,13 +35,19 @@ public class main {
 		 * alltarineesK.forEach(System.out::println);
 		 */
 
-		/*
-		 * trainees.stream() .filter(str->str.length()>2) .map(name->name.toUpperCase())
-		 * .forEach(System.out::println);
-		 */
+		
+		  trainees.stream() 
+		  			.filter(str->str.length()>2) 
+		  			.map(name->name.toUpperCase())
+		  			.forEach(System.out::println);
+		  
+		  
+		  
+		  
+		 
 
 		List<Book> bookList = Arrays.asList(
-				new Book(101, "Java Programming", "James Gosling", 2020, 10, BookGenre.TECHNOLOGY),
+				new Book(101, "Java Programming", "James Gosling", 2020, 10, BookGenre.FICTION),
 				new Book(102, "Clean Code", "Robert C. Martin", 2008, 8, BookGenre.TECHNOLOGY),
 				new Book(103, "Effective Java", "Joshua Bloch", 2018, 12, BookGenre.TECHNOLOGY),
 				new Book(104, "The Alchemist", "Paulo Coelho", 1988, 15, BookGenre.FICTION),
@@ -52,7 +58,7 @@ public class main {
 				new Book(109, "Mahabharata", "Ved Vyasa", 400, 6, BookGenre.MYTHOLOGY),
 				new Book(110, "The Shiva Trilogy", "Amish Tripathi", 2010, 14, BookGenre.MYTHOLOGY));
 
-//		filterOnAuthor(bookList);
+		filterOnAuthor(bookList);
 
 //		uniqueBooks(bookList);
 
@@ -127,7 +133,9 @@ public class main {
 	}
 
 	private static void filterOnAuthor(List<Book> bookList) {
-		bookList.stream().filter(book -> book.bookGenre.equals("James Gosling")).forEach(System.out::println);
+		bookList.stream()
+		.filter(book -> book.bookGenre.equals("James Gosling"))
+		.forEach(System.out::println);
 	}
 
 }

@@ -2,17 +2,17 @@ package org.ritik.stream;
 
 public class Book {
 	
-	int bookId;
+	private int bookId;
 	String bookName;
 	String bookAuthor;
 	int bookYearPublication;
 	int bookTotalQuantity;
 	BookGenre bookGenre;
 	
-	public Book(int bookId, String bookName, String bookAuthor, int bookYearPublication, int bookTotalQuantity,
+	
+	public Book( String bookName, String bookAuthor, int bookYearPublication, int bookTotalQuantity,
 			BookGenre bookGenre) {
 		super();
-		this.bookId = bookId;
 		this.bookName = bookName;
 		this.bookAuthor = bookAuthor;
 		this.bookYearPublication = bookYearPublication;
@@ -70,7 +70,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", bookAuthor=" + bookAuthor
+		return "Book [bookId" + bookId + ", bookName=" + bookName + ", bookAuthor=" + bookAuthor
 				+ ", bookYearPublication=" + bookYearPublication + ", bookTotalQuantity=" + bookTotalQuantity
 				+ ", bookGenre=" + bookGenre + "]";
 	}

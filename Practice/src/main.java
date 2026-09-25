@@ -1,31 +1,29 @@
-
-
 public class main { // main objmain = new main();
 					
 
 	//int add(int int);//protype
 	
-	
-	private static int i;
+//	
+//	private static int i;
 
 
 	//funtion with arg, with return
-	static int add1(int a, int b) {
-		return a+b;
-	}
-	//funtion witn arg, without return
-	public static void add2(int a, int b) {
-		System.out.println(a+b);
-	}
-	//funtion without arg, with return
-	public static int add3() {
-		return 0;
-	}
-	
-	//funtion without arg, without return
-	public static void add4() {
-		System.out.println("Hello");
-	}
+//	static int add1(int a, int b) {
+//		return a+b;
+//	}
+//	//funtion witn arg, without return
+//	public static void add2(int a, int b) {
+//		System.out.println(a+b);
+//	}
+//	//funtion without arg, with return
+//	public static int add3() {
+//		return 0;
+//	}
+//	
+//	//funtion without arg, without return
+//	public static void add4() {
+//		System.out.println("Hello");
+//	}
 //	
 //	public static void add(int a,int b) { // definition
 //		//int sum = a + b;
@@ -56,22 +54,22 @@ public class main { // main objmain = new main();
 		
 		
 		
-		int[] arr = new int[5];
-		int[][] arr1 = new int[2][2];
-		
-		
-		for(int iTmp=0;iTmp<arr1.length;iTmp++) {
-			for(int jTmp=0;jTmp<arr1.length;jTmp++) {
-				arr1[iTmp][jTmp] = ConsoleInput.getInt();
-			}
-		}
-		
-		for(int iTmp=0;iTmp<arr1.length;iTmp++) {
-			for(int jTmp=0;jTmp<arr1.length;jTmp++) {
-				System.out.print(arr1[iTmp][jTmp]+" ");
-			}
-			System.out.println();
-		}
+//		int[] arr = new int[5];
+//		int[][] arr1 = new int[2][2];
+//		
+//		
+//		for(int iTmp=0;iTmp<arr1.length;iTmp++) {
+//			for(int jTmp=0;jTmp<arr1.length;jTmp++) {
+//				arr1[iTmp][jTmp] = ConsoleInput.getInt();
+//			}
+//		}
+//		
+//		for(int iTmp=0;iTmp<arr1.length;iTmp++) {
+//			for(int jTmp=0;jTmp<arr1.length;jTmp++) {
+//				System.out.print(arr1[iTmp][jTmp]+" ");
+//			}
+//			System.out.println();
+//		}
 		
 //		Student[] allStd = new Student[3];
 		
